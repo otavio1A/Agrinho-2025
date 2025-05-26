@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meu portfólio - Tecnologia, Artes e Educação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+        :root {
+            --cor-primaria: #198754;
+            --cor-secundaria: #14532d;
+            --cor-fundo: #e6f4ea;
+            --cor-texto: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6f4ea 0%, #c7eacb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header img {
+            border: 5px solid var(--cor-secundaria);
+            margin-bottom: 15px;
+        }
+
+        .badge.bg-success {
+            background-color: var(--cor-secundaria) !important;
+            padding: 10px;
+            font-size: 1rem;
+            margin: 5px;
+        }
+
+        h1,
+        h2 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            color: var(--cor-secundaria);
+            font-weight: bold;
+        }
+
+        .btn-link {
+            color: var(--cor-primaria);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .btn-link:hover {
+            color: var(--cor-secundaria);
+            text-decoration: underline;
+        }
+
+        .modal-header,
+        .modal-footer {
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        footer a {
+            color: var(--cor-texto);
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <img src="./img/avatar-perfil.png" alt="avatar do Otávio Uhren" class="rounded-circle" width="150" height="150" />
+            <p class="lead">Eu sou o Otávio Uhren_</p>
+            <h1>Estudante do Ensino Médio e apaixonado por Tecnologia, Artes e Educação</h1>
+            <p>Estudo pensamento computacional e desenvolvo projetos que unem inovação, criatividade e aprendizado. Confira meus trabalhos!</p>
+            <p>Minhas habilidades</p>
+            <div>
+                <span class="badge bg-success">HTML</span>
+                <span class="badge bg-success">CSS</span>
+                <span class="badge bg-success">JavaScript</span>
+                <span class="badge bg-success">Scratch</span>
+            </div>
+        </header>
+
+        <main class="mt-5">
+            <h2 class="text-center mb-4">Meus projetos em Tecnologia, Artes e Educação</h2>
+            <div class="row g-4">
+                <!-- Projeto 1: Tecnologia e Inovação -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/projeto-tecnologia.png" class="card-img-top" alt="Projeto sobre tecnologia e inovação" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tecnologia e Inovação</h5>
+                            <p class="card-text">Projeto que explora novas tecnologias, inteligência artificial e soluções criativas para o futuro.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalTecnologia">Veja o projeto</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Artes e Design -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/projeto-artes.png" class="card-img-top" alt="Projeto sobre artes e design" />
+                        <div class="card-body">
+                            <h5 class="card-title">Artes e Design</h5>
+                            <p class="card-text">Projeto artístico que combina design digital, ilustração e criatividade para expressar ideias.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalArtes">Veja o projeto</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Educação e Ensino -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/projeto-educacao.png" class="card-img-top" alt="Projeto sobre educação e ensino" />
+                        <div class="card-body">
+                            <h5 class="card-title">Educação e Ensino</h5>
+                            <p class="card-text">Projeto focado em métodos inovadores de ensino, ferramentas digitais e aprendizado ativo.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalEducacao">Veja o projeto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modais -->
+        <div class="modal fade" id="modalTecnologia" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Tecnologia e Inovação</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Explore ideias e projetos inovadores com tecnologias emergentes, incluindo inteligência artificial e automação.</p>
+                        <img src="./img/projeto-tecnologia.png" class="img-fluid w-100" alt="Tecnologia e Inovação" />
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-success">Ver projeto ao vivo</a>
+                        <a href="#" class="btn btn-success">Ver código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalArtes" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Artes e Design</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Projetos que combinam arte digital, ilustração e design para transmitir mensagens criativas e impactantes.</p>
+                        <img src="./img/projeto-artes.png" class="img-fluid w-100" alt="Artes e Design" />
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-success">Ver projeto ao vivo</a>
+                        <a href="#" class="btn btn-success">Ver código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalEducacao" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Educação e Ensino</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Desenvolvimento de projetos educacionais que utilizam metodologias inovadoras e tecnologias digitais para facilitar o aprendizado.</p>
+                        <img src="./img/projeto-educacao.png" class="img-fluid w-100" alt="Educação e Ensino" />
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-success">Ver projeto ao vivo</a>
+                        <a href="#" class="btn btn-success">Ver código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5 text-center">
+            <h2>Entre em contato</h2>
+            <div>
+                <i class="bi bi-github"></i>
+                <a href="https://github.com/femascheti">GitHub</a>
+            </div>
+            <p class="my-3">© 2024 - Produzido por Otávio Uhren</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
